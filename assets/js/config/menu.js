@@ -2,30 +2,25 @@ export default [{
 	catagory: "Resources",
 	links: [{
 		name: "Invoices",
-		icon: "creditCard",
-		path: "invoices"
+		icon: "creditCard"
 	},
 	{
 		name: "Offers",
-		icon: "archive",
-		path: "offers"
+		icon: "archive"
 	},
 	{
 		name: "Pages",
-		icon: "fileText",
-		path: "pages"
+		icon: "fileText"
 	},
 	{
 		name: "Catalogs",
-		icon: "listAlt",
-		path: "catalogs"
+		icon: "listAlt"
 	}]
 },
 {
 	catagory: "Settings",
 	links: [{
 		name: "Admin Settings",
-		icon: "cogs",
-		path: "admin-settings"
+		icon: "cogs"
 	}]
 }];

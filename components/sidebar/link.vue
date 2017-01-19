@@ -14,9 +14,15 @@ export default {
 		Icon
 	},
 
+	computed: {
+		path() {
+			return this.link.name.toLowerCase().replace(/ /g, '-')
+		}
+	},
+
 	methods: {
 		go() {
-			this.$router.push(this.link.path);
+			this.$router.push(this.path);
 		}
 	}
 }
