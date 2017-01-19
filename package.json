@@ -1,0 +1,16 @@
+{
+  "name": "samwise-frontend",
+  "version": "0.0.0",
+  "description": "Frontend for the Samwise E-Commerce Web Application",
+  "author": "Tyler Torola <Tyler@TJT.Codes",
+  "private": true,
+  "dependencies": {
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  }
+}
