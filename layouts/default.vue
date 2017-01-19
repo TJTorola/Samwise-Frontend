@@ -1,10 +1,25 @@
 <template>
-	<div>
-		<my-header/>
+	<div class="body">
 		<sidebar/>
-		<nuxt/>
+		<main>
+			<my-header/>
+			<nuxt/>
+		</main>
 	</div>
 </template>
+
+<style scoped>
+.body {
+	display: flex;
+	height: 100%;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+</style>
 
 <script>
 import Sidebar from '~components/sidebar.vue';
