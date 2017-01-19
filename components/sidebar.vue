@@ -1,6 +1,7 @@
 <template>
 	<aside>
 		<div class="logo"></div>
+		<my-menu/>
 	</aside>
 </template>
 
@@ -17,3 +18,13 @@ aside {
 	width: 100%;
 }
 </style>
+
+<script>
+import MyMenu from './sidebar/menu.vue';
+
+export default {
+	components: {
+		MyMenu
+	}
+}
+</script>
