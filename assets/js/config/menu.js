@@ -2,25 +2,25 @@ export default [{
 	catagory: "Resources",
 	links: [{
 		name: "Invoices",
-		logo: "creditCard"
+		icon: "creditCard"
 	},
 	{
 		name: "Offers",
-		logo: "archive"
+		icon: "archive"
 	},
 	{
 		name: "Pages",
-		logo: "fileText"
+		icon: "fileText"
 	},
 	{
 		name: "Catalogs",
-		logo: "listAlt"
+		icon: "listAlt"
 	}]
 },
 {
 	catagory: "Settings",
 	links: [{
 		name: "Admin Settings",
-		logo: "cogs"
+		icon: "cogs"
 	}]
 }];
