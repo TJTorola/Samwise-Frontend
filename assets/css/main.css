@@ -17,3 +17,7 @@ body {
 #__nuxt {
 	height: 100%;
 }
+
+.thin {
+	font-weight: 200;
+}
