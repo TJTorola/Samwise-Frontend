@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div>{{ menu.catagory }}</div>
+		<div class="sub-header">{{ menu.catagory }}</div>
 		<ul>
 			<my-link 
 				v-for="link in menu.links"
@@ -20,3 +20,18 @@ export default {
 	props: ['menu']
 }
 </script>
+
+<style scoped>
+.sub-header {
+	background: #1a2226;
+	color: #4b646f;
+	width: 100%;
+	height: 37px;
+	padding: 10px 25px 10px 15px;
+	font-size: 13px;
+}
+
+ul {
+	padding: 0;
+}
+</style>
