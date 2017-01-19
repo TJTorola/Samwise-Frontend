@@ -2,19 +2,18 @@
 	<div>
 		<div class="sub-header">{{ menu.catagory }}</div>
 		<ul>
-			<li v-for="link in menu.links">
-				<icon v-bind:i="link.icon" /> {{ link.name }}
-			</li>
+			<my-link v-for="link in menu.links"
+				v-bind:link="link"/>
 		</ul>
 	</div>
 </template>
 
 <script>
-import Icon from '~components/icon.vue';
+import MyLink from './link.vue';
 
 export default {
 	components: {
-		Icon
+		MyLink
 	},
 
 	props: ['menu']
@@ -31,37 +30,8 @@ export default {
 	font-size: 13px;
 }
 
-.icon {
-	fill: #b8c7ce;
-	height: 16px;
-	position: relative;
-	top: 3px;
-	margin-right: 8px;
-}
-
 ul {
 	margin: 0;
 	padding: 0;
-}
-
-li {
-	list-style: none;
-	height: 40px;
-	line-height: 40px;
-	padding: 0 5px 0 15px;
-	color: #b8c7ce;
-	font-size: 14px;
-	border-left: 3px solid transparent;
-}
-
-li:hover {
-	cursor: pointer;
-	color: white;
-	background: #1e282c;
-	border-left-color: #3c8dbc;
-}
-
-li:hover .icon {
-	fill: white;
 }
 </style>
