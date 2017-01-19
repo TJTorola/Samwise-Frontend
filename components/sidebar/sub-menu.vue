@@ -2,21 +2,15 @@
 	<div>
 		<div class="sub-header">{{ menu.catagory }}</div>
 		<ul>
-			<my-link 
-				v-for="link in menu.links"
-				v-bind:link="link"/>
+			<li v-for="link in menu.links">
+				{{ link.name }}
+			</li>
 		</ul>
 	</div>
 </template>
 
 <script>
-import MyLink from './link.vue';
-
 export default {
-	components: {
-		MyLink
-	},
-
 	props: ['menu']
 }
 </script>
@@ -32,6 +26,22 @@ export default {
 }
 
 ul {
+	margin: 0;
 	padding: 0;
+}
+
+li {
+	list-style: none;
+	padding: 12px 5px 12px 15px;
+	color: #b8c7ce;
+	font-size: 14px;
+	border-left: 3px solid transparent;
+}
+
+li:hover {
+	cursor: pointer;
+	color: white;
+	background: #1e282c;
+	border-left-color: #3c8dbc;
 }
 </style>
