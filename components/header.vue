@@ -1,13 +1,25 @@
 <template>
 	<header>
-		<div class="icon-container">
+		<div class="container">
 			<icon i="bars" />
+		</div>
+
+		<div class="spacer" />
+
+		<div class="container">
+			<icon i="shoppingCart" />
+		</div>
+
+		<div class="container thin">
+			Tyler Torola
 		</div>
 	</header>
 </template>
 
 <style scoped>
 header {
+	color: white;
+	fill: white;
 	background: #3c8dbc;
 	width: 100%;
 	height: 50px;
@@ -19,17 +31,20 @@ header {
 	height: 100%;
 }
 
-.icon-container {
+.spacer {
+	flex-grow: 1;
+}
+
+.container {
 	padding: 16px;
 }
 
-.icon-container:hover {
+.container:hover {
 	cursor: pointer;
 	background: #357ca5;
 }
 
 .icon {
-	fill: white;
 	height: 16px;
 }
 </style>
