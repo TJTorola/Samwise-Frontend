@@ -35,7 +35,7 @@ export default {
 	fill: #b8c7ce;
 	height: 16px;
 	position: relative;
-	top: 2px;
+	top: 3px;
 	margin-right: 8px;
 }
 
