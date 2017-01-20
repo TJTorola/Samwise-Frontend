@@ -77,7 +77,7 @@ export default {
 	props: ['header', 'subHeader', 'icon'],
 
 	data: () => ({
-		expanded: false
+		expanded: true
 	}),
 
 	components: {

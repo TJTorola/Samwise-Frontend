@@ -1,18 +1,25 @@
 <template>
 	<div>
-		<Box header="My Box" sub-header="with a subheader" icon="user">
-			<h1>Here we are</h1>
-			<p>Hello</p>
-		</Box>
+		<box header="Buttons" sub-header="clicky-doey-things">
+			<sw-button icon="user">
+				Find User
+			</sw-button>
+
+			<sw-button icon="trash" color="danger">
+				Delete
+			</sw-button>
+		</box>
 	</div>
 </template>
 
 <script>
-import Box from '~components/box/main.vue';
+import Box from '~components/box.vue';
+import SwButton from '~/components/button.vue';
 
 export default {
 	components: {
-		Box
+		Box,
+		SwButton
 	}
 }
 </script>
