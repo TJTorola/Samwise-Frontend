@@ -16,8 +16,8 @@
 			</div>
 		</header>
 		<div class="body">
-			<!-- <Icon i="ellipsisH"/> -->
-			<slot/>
+			<slot v-if="expanded" />
+			<Icon v-else i="ellipsisH"/>
 		</div>
 	</main>
 </template>

@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<Box header="My Box" sub-header="with a subheader" icon="user">
-			Test content, looks like we made it.
+			<h1>Here we are</h1>
+			<p>Hello</p>
 		</Box>
 	</div>
 </template>
