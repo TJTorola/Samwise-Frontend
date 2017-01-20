@@ -1,5 +1,5 @@
 <template>
-	<li v-on:click="go">
+	<li v-on:click="go" class="no-select">
 		<icon v-bind:i="link.icon" /> {{ link.name }}
 	</li>
 </template>

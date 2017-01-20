@@ -10,7 +10,7 @@
 			<icon i="shoppingCart" />
 		</div>
 
-		<div class="container thin">
+		<div class="container thin no-select">
 			Tyler Torola
 		</div>
 	</header>

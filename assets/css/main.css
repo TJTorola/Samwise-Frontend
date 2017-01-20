@@ -19,6 +19,11 @@ small {
 	font-size: 65%;
 }
 
+::selection {
+	background: #3c8dbc;
+	color: white;
+}
+
 #__nuxt {
 	height: 100%;
 }
