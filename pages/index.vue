@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<Box header="My Box" sub-header="/w a subheader" icon="user" />
+		<Box header="My Box" sub-header="with a subheader" icon="user">
+			Test content, looks like we made it.
+		</Box>
 	</div>
 </template>
 

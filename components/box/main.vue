@@ -16,7 +16,8 @@
 			</div>
 		</header>
 		<div class="body">
-			<Icon i="ellipsisH"/>
+			<!-- <Icon i="ellipsisH"/> -->
+			<slot/>
 		</div>
 	</main>
 </template>
