@@ -1,14 +1,22 @@
 <template>
-	<main>
+	<main
+		v-bind:class="expanded ? '' : 'active'"
+		v-on:click="mainToggle">
 		<header>
 			<Icon i="user" />
-			I'm a box header
-			<small>
-				(With a sub-header)
-			</small>
+			<div class="box-title no-select">
+				I'm a box header
+				<small>
+					(With a sub-header)
+				</small>
+			</div>
+			<div v-on:click="toggleExpanded">
+				<Icon class="expander" 
+					v-bind:i="expanded ? 'minus' : 'plus'"/>
+			</div>
 		</header>
 		<div class="body">
-			Some content...
+			<Icon i="ellipsisH"/>
 		</div>
 	</main>
 </template>
@@ -16,21 +24,44 @@
 <style scoped>
 main {
 	color: #444;
+	fill: #444;
 	border-top: 4px green solid;
 	background: white;
 	border-radius: 4px;
+	box-shadow: 3px 3px 0 lightgray;
+}
+
+main.active:hover {
+	cursor: pointer;
+}
+
+main.active:hover .expander {
+	fill: #3C8DBC;
+}
+
+.expander:hover {
+	fill: #3C8DBC;
+	cursor: pointer;
 }
 
 header {
 	padding: 10px;
 	padding-top: 6px;
+	display: flex;
+}
+
+.box-title {
+	padding: 0 5px;
+	flex-grow: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
 }
 
 .icon {
 	height: 15px;
 	position: relative;
 	top: 1px;
-	margin-right: 3px;
 }
 
 .body {
@@ -42,8 +73,24 @@ header {
 import Icon from '~components/icon.vue';
 
 export default {
+	data: () => ({
+		expanded: false
+	}),
+
 	components: {
 		Icon
+	},
+
+	methods: {
+		mainToggle(e) {
+			if (!this.expanded) this.expanded = true;
+			e.stopPropagation();
+		},
+
+		toggleExpanded(e) {
+			this.expanded = !this.expanded;
+			e.stopPropagation();
+		}
 	}
 }
 </script>

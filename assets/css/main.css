@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	cursor: default;
 }
 
 html {
@@ -24,4 +25,8 @@ small {
 
 .thin {
 	font-weight: 200;
+}
+
+.no-select {
+	user-select: none;
 }
