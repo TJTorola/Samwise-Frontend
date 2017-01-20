@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Box/>
+		<Box header="My Box" sub-header="/w a subheader" icon="user" />
 	</div>
 </template>
 

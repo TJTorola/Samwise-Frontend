@@ -3,11 +3,11 @@
 		v-bind:class="expanded ? '' : 'active'"
 		v-on:click="mainToggle">
 		<header>
-			<Icon i="user" />
+			<Icon v-if="icon" v-bind:i="icon" />
 			<div class="box-title no-select">
-				I'm a box header
-				<small>
-					(With a sub-header)
+				{{ header }}
+				<small v-if="subHeader">
+					({{ subHeader }})
 				</small>
 			</div>
 			<div v-on:click="toggleExpanded">
@@ -73,6 +73,8 @@ header {
 import Icon from '~components/icon.vue';
 
 export default {
+	props: ['header', 'subHeader', 'icon'],
+
 	data: () => ({
 		expanded: false
 	}),
