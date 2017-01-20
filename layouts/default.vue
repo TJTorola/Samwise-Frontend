@@ -3,7 +3,7 @@
 		<sidebar/>
 		<main>
 			<my-header/>
-			<nuxt/>
+			<nuxt class="page" />
 		</main>
 	</div>
 </template>
@@ -12,6 +12,10 @@
 .body {
 	display: flex;
 	height: 100%;
+}
+
+.page {
+	padding: 10px;
 }
 
 main {

@@ -14,6 +14,10 @@ body {
 	height: 100%;
 }
 
+small {
+	font-size: 65%;
+}
+
 #__nuxt {
 	height: 100%;
 }
