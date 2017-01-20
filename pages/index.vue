@@ -8,6 +8,10 @@
 			<sw-button icon="trash" color="danger">
 				Delete
 			</sw-button>
+
+			<sw-button icon="timesCircle" disabled>
+				Disabled Button
+			</sw-button>
 		</box>
 	</div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-	<div v-bind:class="`button no-select ${ color }`">
+	<div v-bind:class="`button no-select ${ color }${ disabled ? ' disabled' : '' }`">
 		<Icon v-if="icon" v-bind:i="icon" />
 		<slot/>
 	</div>
@@ -40,10 +40,18 @@
 	background: #dd4b39;
 }
 
+.disabled, .disabled:hover {
+	cursor: default;
+	background: gray;
+	border-color: gray;
+	color: white;
+	fill: white;
+}
+
 .icon {
 	height: 16px;
 	position: relative;
-	top: 1px;
+	top: 2px;
 	left: -3px;
 }
 </style>
@@ -54,9 +62,15 @@ import Icon from '~components/icon'
 export default {
 	props: {
 		icon: String,
+
 		color: {
 			type: String,
 			default: 'default'
+		},
+
+		disabled: {
+			type: Boolean,
+			default: false
 		}
 	},
 
