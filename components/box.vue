@@ -30,6 +30,7 @@ main {
 	background: white;
 	border-radius: 4px;
 	box-shadow: 3px 3px 0 lightgray;
+	margin-bottom: 10px;
 }
 
 main.active:hover {
