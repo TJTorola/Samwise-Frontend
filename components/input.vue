@@ -1,7 +1,16 @@
 <template>
 	<div class="wrapper">
-		<input type="text" v-model="value" v-if="type === 'text'" />
-		<input type="password" v-model="value" v-if="type === 'password'" />
+		<input type="text" 
+			:class="icon ? 'has-icon' : ''"
+			v-model="value" 
+			v-if="type === 'text'" />
+		<input type="password" 
+			:class="icon ? 'has-icon' : ''"
+			v-model="value" 
+			v-if="type === 'password'" />
+
+		<icon :i="icon" v-if="icon"/>
+
 		<label :class="{ filled }">
 			{{ label }}
 		</label>
@@ -18,7 +27,16 @@
 	cursor: text;
 }
 
+.icon {
+	height: 20px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	pointer-events: none;
+}
+
 input {
+	flex-grow: 1;
 	border: none;
 	background: transparent;
 	position: absolute;
@@ -27,8 +45,13 @@ input {
 	left: 0;
 	padding-left: 10px;
 	padding-top: 10px;
+	padding-right: 10px;
 	width: 100%;
 	height: 100%;
+}
+
+input.has-icon {
+	padding-right: 40px;
 }
 
 input:focus {
@@ -50,7 +73,13 @@ input:focus ~ label, label.filled {
 </style>
 
 <script>
+import Icon from '~/components/icon.vue';
+
 export default {
+	components: {
+		Icon
+	},
+
 	props: {
 		label: {
 			type: String,
@@ -60,6 +89,10 @@ export default {
 		type: {
 			type: String,
 			default: 'text'
+		},
+
+		icon: {
+			type: String
 		}
 	},
 
