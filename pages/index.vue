@@ -17,7 +17,7 @@
 		<box header="Custom Input">
 			<p>
 				Plain:
-				<sw-input />
+				<sw-input label="E-Mail" />
 			</p>
 
 			<p>

@@ -1,9 +1,10 @@
 <template>
 	<div class="wrapper">
-		<input type="text" v-model="value" />
-		<span class="label" v-bind:class="{ filled }">
-			E-Mail
-		</span>
+		<input type="text" v-model="value" v-if="type === 'text'" />
+		<input type="password" v-model="value" v-if="type === 'password'" />
+		<label :class="{ filled }">
+			{{ label }}
+		</label>
 	</div>
 </template>
 
@@ -34,14 +35,15 @@ input:focus {
 	outline: none;
 }
 
-.label {
+label {
 	position: absolute;
 	top: 12px;
 	left: 10px;
 	transition: 0.2s ease all;
+	pointer-events: none;
 }
 
-input:focus ~ .label, .label.filled {
+input:focus ~ label, label.filled {
 	top: 5px;
 	font-size: 10px;
 }
@@ -49,6 +51,18 @@ input:focus ~ .label, .label.filled {
 
 <script>
 export default {
+	props: {
+		label: {
+			type: String,
+			required: true
+		},
+
+		type: {
+			type: String,
+			default: 'text'
+		}
+	},
+
 	data: () => ({
 		value: ''
 	}),
