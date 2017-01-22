@@ -28,6 +28,10 @@ input {
 	width: 100%;
 }
 
+input:focus {
+	outline: none;
+}
+
 .label {
 	position: absolute;
 	top: 12px;
