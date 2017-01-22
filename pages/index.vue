@@ -14,6 +14,10 @@
 			</sw-button>
 		</box>
 
+		<box header="Custom Input">
+			<sw-input />
+		</box>
+
 		<box header="Working Buttons">
 			<working-button icon="star">
 				Become a star
@@ -46,6 +50,7 @@ import SwButton from '~/components/button.vue';
 import WorkingButton from '~/components/working-button.vue';
 import WorkingIcon from '~/components/working-icon.vue';
 import Icon from '~/components/icon.vue';
+import SwInput from '~/components/input.vue';
 
 export default {
 	data: () => ({
@@ -57,7 +62,8 @@ export default {
 		Icon,
 		SwButton,
 		WorkingIcon,
-		WorkingButton
+		WorkingButton,
+		SwInput
 	}
 }
 </script>
