@@ -10,9 +10,11 @@
 	cursor: pointer;
 	border: 1px solid black;
 	display: inline-block;
-	padding: 5px 15px;
+	padding: 0 25px;
 	border-radius: 7px;
 	margin: 5px;
+	height: 35px;
+	line-height: 35px;
 }
 
 .button:hover {

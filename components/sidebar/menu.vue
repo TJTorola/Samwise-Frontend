@@ -6,6 +6,12 @@
 	</div>
 </template>
 
+<style scoped>
+.menu {
+	flex-grow: 1;
+}
+</style>
+
 <script>
 import SubMenu from './sub-menu.vue';
 import SUB_MENUS from '~assets/js/config/menu.js';

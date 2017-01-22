@@ -11,7 +11,7 @@
 <style scoped>
 aside {
 	min-width: 230px;
-	height: 100%;
+	min-height: 100%;
 	background: #222d32;
 }
 

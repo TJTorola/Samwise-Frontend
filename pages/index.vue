@@ -15,7 +15,15 @@
 		</box>
 
 		<box header="Custom Input">
-			<sw-input />
+			<p>
+				Plain:
+				<sw-input />
+			</p>
+
+			<p>
+				Working Input:
+				<working-input />
+			</p>
 		</box>
 
 		<box header="Working Buttons">
@@ -51,6 +59,7 @@ import WorkingButton from '~/components/working-button.vue';
 import WorkingIcon from '~/components/working-icon.vue';
 import Icon from '~/components/icon.vue';
 import SwInput from '~/components/input.vue';
+import WorkingInput from '~/components/working-input.vue';
 
 export default {
 	data: () => ({
