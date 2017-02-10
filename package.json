@@ -5,7 +5,8 @@
   "author": "Tyler Torola <Tyler@TJT.Codes>",
   "private": true,
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vuewise": "^1.0.0"
   },
   "scripts": {
     "dev": "nuxt",
