@@ -1,11 +1,11 @@
 <template>
-	<li v-on:click="go" class="no-select">
-		<icon v-bind:i="link.icon" /> {{ link.name }}
+	<li @click="go" class="no-select">
+		<icon :i="link.icon" /> {{ link.name }}
 	</li>
 </template>
 
 <script>
-import Icon from '~components/icon.vue';
+import { Icon } from 'vuewise';
 
 export default {
 	props: ['link'],
